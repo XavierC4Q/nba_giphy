@@ -1,0 +1,7 @@
+export const LOGIN = 'LOGIN'
+export const REGISTER = 'REGISTER'
+export const IS_LOGGED_IN = 'IS LOGGED IN'
+export const LOGOUT = 'LOGOUT'
+export const SINGLE_USER = 'SINGLE USER'
+export const ALL_USERS = 'ALL USERS'
+export const USER_ERROR = 'USER ERROR'
