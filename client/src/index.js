@@ -1,3 +1,4 @@
+import '../publicPath.js'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { configStore } from './store'

@@ -9,6 +9,15 @@ import Register from './components/auth/register'
 import Search from './components/search/search'
 import Profile from './components/profiles/profile'
 
+const styles = {
+    wrapper: {
+        'margin': '0',
+        'padding': '0',
+        'width': 'inherit',
+        'height': 'inherit'
+    }
+}
+
 const mapStateToProps = (state) => {
     return {
         loggedInUser: state.user.loggedInUser,
@@ -28,7 +37,7 @@ class App extends React.Component {
     }   
     render() { 
         const { loggedInUser } = this.props
-        return (<div>
+        return (<div style={styles.wrapper}>
             <Route path='/login' component={Login}/>
             <Route path='/register' component={Register}/>
             <Route path='/search' component={Search}/>

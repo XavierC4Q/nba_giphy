@@ -13,17 +13,41 @@ class Profile extends React.Component {
     }
 
     render(){
-        console.log(this.props)
-        const { loggedInUser, currentUser } = this.props
+        const { 
+            loggedInUser, 
+            currentUser,  
+            favorites,
+            editFavorite,
+            removeFavorite,
+            getSingleGif,
+            authError,
+            favoritesMessage,
+            logout
+        } = this.props
         return(
             <div>
                 {
                     currentUser ? 
                         loggedInUser ? 
                             loggedInUser.username === currentUser.username ? 
-                            <LoggedIn /> : 
-                        <UserPage/> : 
-                    <UserPage/> : 
+                            <LoggedIn 
+                            user={loggedInUser}
+                            favorites={favorites}
+                            editFav={editFavorite}
+                            removeFav={removeFavorite}
+                            getSingleGif={getSingleGif}
+                            authError={authError}
+                            favoritesMessage={favoritesMessage}
+                            logout={logout}
+                            /> : 
+                        <UserPage
+                        user={currentUser}
+                        favorites={favorites}
+                        /> : 
+                    <UserPage
+                    user={currentUser}
+                    favorites={favorites}
+                    /> : 
                     'loading'
                 }
             </div>

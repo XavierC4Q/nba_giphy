@@ -1,0 +1,28 @@
+.search-wrapper {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.form-wrapper {
+    display: flex;
+    border: 1px solid grey;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.search-select {
+    align-self: flex-end
+}
+
+.search-button {
+    align-self: flex-end
+}

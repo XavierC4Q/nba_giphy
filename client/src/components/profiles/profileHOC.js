@@ -18,7 +18,6 @@ export const ProfileHOC = (WrappedComponent) => {
             logout: () => dispatch(actions.logoutUser()),
             getAllFavorites: (username) => dispatch(actions.getAllFavorites(username)),
             getUser: (username) => dispatch(actions.getSingleUser(username)),
-            addFavorite: (favorite) => dispatch(actions.addFavorite(favorite)),
             removeFavorite: (id) => dispatch(actions.removeFavorite(id)),
             editFavorite: (changes) => dispatch(actions.editFavorite(changes)),
             getSingleGif: (id) => dispatch(actions.singleGif(id))

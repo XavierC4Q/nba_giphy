@@ -3,6 +3,7 @@ import { Formik, Field } from 'formik'
 import { default as actions } from '../../actions/index'
 import { connect } from 'react-redux'
 import { FormFieldInput } from '../../util/formField'
+import './search.css'
 
 const mapStateToProps = (state) => {
     return {
@@ -20,7 +21,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const Search = ({ results, loggedInUser, gifs, handleSearch }) => {
     return (
-        <div>
+        <div className='search-wrapper'>
             <Formik
             initialValues={{
                 query: '',
@@ -41,24 +42,23 @@ const Search = ({ results, loggedInUser, gifs, handleSearch }) => {
                     handleSubmit
                 } = props
                 return (
-                <div>
-                    <form onSubmit={handleSubmit}>
-                        <h1>SEARCHING</h1>
-                        <Field type='text' name='query' label='What are your searching for?' component={FormFieldInput}/>
-                        <select name='amount' onChange={handleChange} onBlur={handleBlur}>
+                <div className='form-wrapper'>
+                    <form className='search-form' onSubmit={handleSubmit}>
+                        <Field type='text' name='query' label='Search for player or team' component={FormFieldInput}/>
+                        <select className='search-select' name='amount' onChange={handleChange} onBlur={handleBlur}>
                             {values.limits.map((limit) => (
                                 <option key={limit} name='amount' value={limit}>{limit}</option>
                             ))}
                         </select>
-                        <button type='submit'>Search</button>
-                        <div>
-                            {gifs.map((gif) => (
-                                <div>
-                                    <img src={gif.url} width={gif.width} height={gif.height}/>
-                                </div>
-                            ))}
-                        </div>
+                        <button className='search-button' type='submit'>Search</button>
                     </form>
+                    <div>
+                        {gifs.map((gif) => (
+                            <div>
+                                <img src={gif.url} width={gif.width} height={gif.height}/>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )}}/>
         </div>

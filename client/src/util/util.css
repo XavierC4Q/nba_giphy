@@ -1,0 +1,19 @@
+.form-field {
+    height: 65px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.form-field-label {
+    align-self: baseline;
+    margin-left: 65px;
+    font-size: 150%;
+}
+
+.form-field-input {
+    width: 350px;
+    padding: 2px;
+    align-self: flex-end
+}
