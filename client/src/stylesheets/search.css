@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Outline');
+
+.form-container,
+.search-wrapper,
+.form-field,
+.search-form {
+    display: flex;
+    flex-direction: column;
+}
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+.nbalogo {
+    display: flex;
+    width: 200px;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 20px;
+}
+.form-field-input,
+.search-form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 0;
+}
+.form-field-label {
+    color: white;
+    font-family: 'Bungee Outline', cursive;
+    font-size: 30px;
+}
+.img-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 65%;
+    padding: 20px;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    background-color: black;
+}
+.img-item-container {
+    display: flex;
+    width: 340px;
+    height: 300px;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 20px;
+}
+.img-item {
+    width: 340px;
+    height: 300px;
+}
+

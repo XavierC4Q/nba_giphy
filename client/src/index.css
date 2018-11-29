@@ -1,0 +1,8 @@
+#app,
+body {
+    background-size: 350px;
+    background-attachment: scroll;
+    background-color: black;
+    margin: 0;
+    height: 100%;
+}
